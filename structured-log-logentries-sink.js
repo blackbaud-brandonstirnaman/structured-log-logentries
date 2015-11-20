@@ -27,7 +27,12 @@
       var processedEvts = evts.forEach(function (evt) {
         var formatted = evt.messageTemplate.render(evt.properties);
 
-        LE.log({
+        var logFunc = LE[evt.level.toLowerCase()];
+        if (logFunc == null) {
+          logFunc = LE.log;
+        }
+
+        logFunc({
           message: formatted,
           level: evt.level,
           data: evt.properties
