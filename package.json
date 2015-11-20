@@ -12,6 +12,6 @@
     }
   ],
   "dependencies": {
-    "le_js": "git+https://github.com/blackbaud-brandonstirnaman/le_js.git"
+    "le_js": "blackbaud-brandonstirnaman/le_js#trace-changes"
   }
 }
